@@ -1,9 +1,11 @@
 import pygame, sys, random, os
 from pygame.locals import *
 
+# Window starting position
 position = 500, 100
 os.environ['SDL_VIDEO_WINDOW_POS'] = str(position[0]) + "," + str(position[1])
 
+# Record file
 if not os.path.exists('record.txt'):
     file = open('record.txt', 'w')
     file.write('0')
@@ -13,6 +15,7 @@ file = open('record.txt')
 record = int(file.read())
 file.close()
 
+# Start pygame
 pygame.init()
 
 # FPS settings
