@@ -4,11 +4,11 @@ from pygame.locals import *
 if not os.path.exists('record.txt'):
     file = open('record.txt', 'w')
     file.write('0')
-    file.close
+    file.close()
 
 file = open('record.txt')
 record = int(file.read())
-file.close
+file.close()
 
 pygame.init()
 
@@ -198,7 +198,7 @@ while True:
                         file = open('record.txt', 'w')
                         record = points
                         file.write(str(record))
-                        file.close
+                        file.close()
 
         for event in pygame.event.get():
             if event.type == KEYDOWN and event.key == K_SPACE:
