@@ -1,5 +1,8 @@
-import pygame, sys, random, os.path
+import pygame, sys, random, os
 from pygame.locals import *
+
+position = 500, 100
+os.environ['SDL_VIDEO_WINDOW_POS'] = str(position[0]) + "," + str(position[1])
 
 if not os.path.exists('record.txt'):
     file = open('record.txt', 'w')
@@ -145,11 +148,11 @@ obstacles = []
 fontObj = pygame.font.Font('freesansbold.ttf', 32)
 
 gameText = Text(fontObj, 'Pokémon Jump', BLUE, screenWidth//2, 20)
-pointsText = Text(fontObj, 'Points: ' + str(points), RED, screenWidth // 2 - 100, screenHeight - 20)
+pointsText = Text(fontObj, 'Points: ' + str(points), RED, screenWidth // 2 - 120, screenHeight - 20)
 youLoseText = Text(fontObj, 'You lose!', RED, screenWidth//2, screenHeight//2)
 totalPointsText = Text(fontObj, 'Total points = ' + str(points), RED, screenWidth//2, screenHeight//2 + 30)
 playAgainText = Text(fontObj, 'Press space to play again.', WHITE, screenWidth//2, screenHeight//2 + 60)
-recordText = Text(fontObj, 'Record: ' + str(record), GREEN, screenWidth//2 + 100, screenHeight - 20)
+recordText = Text(fontObj, 'Record: ' + str(record), GREEN, screenWidth//2 + 120, screenHeight - 20)
 
 # Main game loop
 while True:
