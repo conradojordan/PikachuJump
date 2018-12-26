@@ -8,9 +8,9 @@ FPS = 60
 fpsClock = pygame.time.Clock()
 
 # Set up window
-width = 800
-height = 600
-displaySurface = pygame.display.set_mode((width, height))
+screenWidth = 800
+screenHeight = 600
+displaySurface = pygame.display.set_mode((screenWidth, screenHeight))
 pygame.display.set_caption('Pikachu Jump v0.9')
 
 # Colors
@@ -26,7 +26,6 @@ playHeight = 500
 playX0 = 50
 playY0 = 50
 playWallWidth = 10
-
 
 # Pikachu sprite frames duration
 currentFrame = 0
@@ -105,7 +104,6 @@ class Obstacle(object):
         self.x += self.velX
         if self.x < self.minX:
             self.destroy = True
-
 
 pikachu = Pikachu()
 currentTime = 0
