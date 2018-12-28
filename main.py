@@ -44,7 +44,7 @@ playWallWidth = 10
 
 # Pikachu sprite frames duration
 currentFrame = 0
-numFrames = 8
+numFrames = 10
 
 # Points
 points = 0
@@ -160,7 +160,9 @@ recordText = Text(fontObj, 'Record: ' + str(record), GREEN, screenWidth//2 + 120
 # Main game loop
 while True:
     if continuePlaying:
-
+        numFrames = 10 - points//100
+        if numFrames < 2:
+            numFrames = 2
         displaySurface.fill(BLACK)
         pygame.draw.rect(displaySurface, WHITE, (playX0, playY0, playWidth, playHeight))
         pygame.draw.rect(displaySurface, RED, (playX0, playY0, playWidth, playHeight), playWallWidth)
