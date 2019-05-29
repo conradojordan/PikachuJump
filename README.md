@@ -14,8 +14,8 @@ pip install pygame==1.9.4
 
 ## Screenshots
 
-![Screenshot number one](screenshot1.png "Screenshot of Pikachu jumping")
-![Screenshot number two](screenshot2.png "Screenshot of lose screen")
+<img src="screenshot1.png" alt="Screenshot of Pikachu jumping" width="600"/>
+<img src="screenshot2.png" alt="Screenshot of losing screen" width="600"/>
 
 ## License
 
