@@ -26,7 +26,7 @@ fpsClock = pygame.time.Clock()
 screenWidth = 800
 screenHeight = 600
 displaySurface = pygame.display.set_mode((screenWidth, screenHeight))
-pygame.display.set_caption('Pikachu Jump v0.9')
+pygame.display.set_caption('Pikachu Jump v1.0')
 
 # Colors
 BLACK = (0, 0, 0)
@@ -150,7 +150,7 @@ obstacles = []
 # Game texts
 fontObj = pygame.font.Font('freesansbold.ttf', 32)
 
-gameText = Text(fontObj, 'Pokémon Jump', BLUE, screenWidth//2, 20)
+gameText = Text(fontObj, 'Pikachu Jump', BLUE, screenWidth//2, 20)
 pointsText = Text(fontObj, 'Points: ' + str(points), RED, screenWidth // 2 - 120, screenHeight - 20)
 youLoseText = Text(fontObj, 'You lose!', RED, screenWidth//2, screenHeight//2)
 totalPointsText = Text(fontObj, 'Total points = ' + str(points), RED, screenWidth//2, screenHeight//2 + 30)
